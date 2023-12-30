@@ -2,3 +2,4 @@ node_modules
 compiled
 .vscode
 *.zip
+apikeys.csv

@@ -114,7 +114,7 @@ const sendSingleVictoriaSecretEmail = async (
 		fromAddress,
 		toAddress,
 		`Enquiry about my latest order`,
-		`Hey,\n\nI recently placed an order on ${orderDate}. Please can you send me a VAT invoice for this purchase?.\n\n JCOPPS LTD\n22 Frenze Hall Lane,\nDiss,\nIP22 4UB\n\nVAT Number - GB414117242?\n\nThanks`
+		`Hey,\n\nI recently placed an order on ${orderDate}. Please can you send me a VAT invoice for this purchase?.\n\nJCOPPS LTD\n22 Frenze Hall Lane,\nDiss,\nIP22 4UB\n\nVAT Number - GB414117242?\n\nThanks`
 	);
 
 const sendSingleRefundQueryEmail = async (
@@ -287,7 +287,7 @@ const main = async (option) => {
 			await sendMultipleEmails(toAddress, "vat");
 			break;
 
-		case "8":
+		case "9":
 			await sendMultipleEmails(toAddress, "victoriasecret");
 			break;
 
@@ -299,7 +299,7 @@ const main = async (option) => {
 };
 
 (async () => {
-	while (option > 0 && option < 8) {
+	while (option > 0 && option <= 9) {
 		await main(option);
 
 		option = promptSync("Enter Option: ");
